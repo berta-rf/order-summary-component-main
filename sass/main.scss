@@ -1,0 +1,148 @@
+//import the functions & variables
+@use "sass:map";
+
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+
+$custom-theme-colors: (
+    "paleblue": hsl(225, 100%, 94%),
+    "brightblue": hsl(245, 75%, 52%),
+    "verypb": hsl(225, 100%, 98%),
+    "desatblue": hsl(224, 23%, 55%),
+    "darkblue": hsl(223, 47%, 23%),
+    "activepurple":hsl(245, 63%, 65%),
+);
+
+$theme-colors: map-merge($custom-theme-colors, $theme-colors);
+
+//import bootstrap
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+// custom-theme-colors
+$desatblue: map.get($theme-colors, "desatblue");
+$paleblue: map.get($theme-colors, "paleblue");
+$verypb: map.get($theme-colors, "verypb");
+$darkblue: map.get($theme-colors, "darkblue");
+$brightblue: map.get($theme-colors, "brightblue");
+$activepurple: map.get($theme-colors, "activepurple");      
+
+
+// start of my css
+
+body {
+    font-family: "Red Hat Display";
+    background-color: $paleblue;
+    margin: 10%;
+}
+
+#main-title {
+
+    font-size: 22px;
+}
+
+.card {
+    border: 0;
+    border-radius: 20px;
+    box-shadow: 0px 5px 20px 0px $desatblue;
+    width: 20rem;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card img {
+    border-radius: 20px 20px 0px 0px;
+}
+
+#plan-container {
+    border-radius: 15px;
+}
+
+p {
+    font-size: 16px;
+    color: $desatblue;
+
+}
+
+h5, h6 {
+    font-size: 14px;
+    color: $darkblue;
+}
+
+#change-link {
+    color: $brightblue;
+    font-size: 12px;
+}
+
+#change-link:hover {
+    color: $activepurple;
+    text-decoration: none;
+
+}
+
+#proceed-btn {
+    background-color: $brightblue;
+    border-radius: 10px;
+    padding: 12px;
+    font-size: 14px;
+    box-shadow: 0px 10px 10px 10px $paleblue;
+}
+
+#proceed-btn:hover {
+    background-color: $activepurple;
+    transition: 0.3s
+}
+
+#cancel-link {
+
+    color: $desatblue;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+#cancel-link:hover {
+    color: $darkblue;
+
+}
+
+.attribution {
+    font-size: 11px; text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+
+
+@media (min-width: 768px) {
+
+    .card {
+        width: 28rem;
+    }
+
+    .card-body {
+        padding: 3rem;
+    }
+  
+    #main-title {
+        font-size: 24px;
+    }
+
+    body {
+        background-image: url(../images/pattern-background-mobile.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    
+}
+
+@media (min-width: 1440px) {
+
+    body {
+        background-image: url(../images/pattern-background-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+}
+

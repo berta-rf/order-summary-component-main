@@ -3,31 +3,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <link href="./css/main.min.css" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Red+Hat+Display:500,700,900">
   
-  <title>Frontend Mentor | Order summary card</title>
-
- 
+  <title>Order summary card</title>
 </head>
+
 <body>
-
-  Order Summary
-
-  You can now listen to millions of songs, audiobooks, and podcasts on any 
-  device anywhere you like!
-
-  Annual Plan
-  $59.99/year
-
-  Change
-
-  Proceed to Payment
-  Cancel Order
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Berta Romano Fernandez</a>.
-  </div>
-</body>
-</html>
+  <section class="container">
+    <div class="row">
+      <div class="col">
+        <div class="card text-center mx-auto">
+          <img src="./images/illustration-hero.svg" class="card-img-top" alt="person dancing to music with headphones on">
+          <div class="card-body">
+            <h5 class="card-title mb-3 fw-bold" id="main-title">Order Summary</h5>
+            <p class="card-text">You can now listen to millions of songs, audiobooks, and podcasts on any 
+              device anywhere you like!</p>
+              
+              <div class="container bg-verypb" id="plan-container">
+                <div class="row py-3">
+                  <div class="col-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"><g fill="none" fill-rule="evenodd"><circle cx="24" cy="24" r="24" fill="#DFE6FB"/><path fill="#717FA6" fill-rule="nonzero" d="M32.574 15.198a.81.81 0 00-.646-.19L20.581 16.63a.81.81 0 00-.696.803V26.934a3.232 3.232 0 00-1.632-.44A3.257 3.257 0 0015 29.747 3.257 3.257 0 0018.253 33a3.257 3.257 0 003.253-3.253v-8.37l9.726-1.39v5.327a3.232 3.232 0 00-1.631-.441 3.257 3.257 0 00-3.254 3.253 3.257 3.257 0 003.254 3.253 3.257 3.257 0 003.253-3.253V15.81a.81.81 0 00-.28-.613z"/></g></svg>
+                  </div>
+                  <div class="col-6">
+                    <h5 class="card-title  m-2 fw-bold">Annual Plan</h5>
+                    <h6 class="card-subtitle m-1 text-muted">$59.99/year</h6>
+                  </div>
+                  <div class="col-2">
+                    <a href="#" class="btn btn-link mt-2 fw-bold" id="change-link">Change</a>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="d-grid gap-2">
+                <button href="#" class="btn fw-bold btn-primary border-0 mt-4" id="proceed-btn" type="button">Proceed to Payment</button>
+                <button href="#" class="btn fw-bold mt-2" id="cancel-link">Cancel Order</button>
+              </div>
+          </div>
+            
+        </div>
+      </div>
+  </section>
+      
+      <div class="attribution text-center mt-5">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        <p>Coded by Berta Romano Fernandez.</p>
+      </div>
+    </body>
+    </html>
